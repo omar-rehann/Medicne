@@ -1,0 +1,576 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+.continer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* starr header */
+.header {
+    background-color: white;
+    margin-top: 5px;
+}
+.header .continer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .continer h2 i{
+    margin-left: 5px;
+}
+.header .continer ul{
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+}
+.header .continer ul li{
+    padding-left: 15px;
+}
+.header .continer ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s;
+    position: relative;
+    padding-bottom: 13px;
+}
+.header .continer ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 0%;
+    height: 15px;
+    padding-top: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.header .continer ul li a:hover::after{
+    width: 100%;
+}
+@media (max-width:767px) {
+    .header .continer .links{
+        position: relative;
+    }
+    .header .continer .links .icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 30px;
+    }
+    .header .continer .links .icon span{
+        background-color: black;
+        margin-bottom: 8px;
+        width: 100px;
+        height: 3px;
+    }
+    .header .continer .links .icon span:first-child{
+        width: 100%;
+    }
+    .header .continer .links .icon span:nth-child(2){
+        width: 50%;
+        transition: 0.2s;
+    }
+    .header .continer .links .icon span:last-child{
+        width: 100%;
+    }
+    .header .continer .links .icon:hover span:nth-child(2){
+        width: 100%;
+    }
+    .header .continer .links ul{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: 0px;
+        background-color: black;
+        min-width: 200px;
+        top: 30px;
+        display: none;
+        z-index: 2;
+    }
+    .header .continer .links ul::after{
+        content: "";
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-color:transparent transparent red transparent;
+        top: -14px;
+        right: 0px;
+    }
+    .header .continer .links ul li a{
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        transition: 0.3s;
+        margin: 10px;
+    }
+    .header .continer .links ul li:hover a{
+        padding-left: 25px;
+        color: white;
+    }
+    /* .header .continer .links li:not(:last-child):hover a{
+        border-bottom:  solid 5px white;
+    } */
+    .header .continer .links .icons:hover,
+    .header .continer .links:hover ul{
+        display: block;
+    }
+    .header .continer ul li a::after{
+        content: "";
+        position: absolute;
+        background-color: red;
+        width: 0%;
+        height: 5px;
+        padding-top: 3px;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    
+}
+
+/* end hedaer */
+/* start photo */
+.photo{
+    background-image: url(photo/hero.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.photo .continer {
+    line-height: 2;
+    transform: translateY(220px);
+}
+.photo .continer .text h4{
+    color: white;
+    font-weight: bold;
+
+}
+.photo .continer .text hr{
+    width: 18%;
+    border-radius: 20px;
+    background-color: black;
+    border:  solid 3px black;
+}
+.photo .continer .text h1{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.photo .continer .text button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+.photo .continer .text button:hover{
+    background-color: white;
+    color: black;
+}
+@media (max-width:767px) {
+    .photo{
+        height: 100vh;
+    }
+    .photo .continer .text hr{
+        width: 28%;
+        border-radius: 20px;
+        background-color: black;
+        border:  solid 3px black;
+    }
+    
+}
+/* end photo */
+/* start about */
+.about {
+    margin-top: 20px;
+}
+.about .continer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .continer .image img{
+    max-width: 600px;
+    max-height: 500px;
+}
+.about .continer .text{
+    margin-left: 4px;
+    padding-left: 10px;
+    line-height: 2;
+}
+.about .continer .text h4{
+    color: black;
+    font-weight: bold;
+}
+.about .continer .text hr{
+    width: 15%;
+    border-radius: 20px;
+    background-color: black;
+    border:  solid 4px black;
+}
+.about .continer .text .info{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    transition: 0.3s
+}
+.about .continer .text .info .icon:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+.about .continer .text .info .icon{
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 40%;
+    transition: 0.4s;
+}
+@media (max-width:1199px) {
+    .about .continer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px auto;
+    }
+    .about .continer .image{
+        margin: 10px auto;
+        text-align: center;
+    }
+    .about .continer .image img{
+        width: 100%;
+    }
+    .about .continer .text .info{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+        margin: 5px
+    }
+    .about .continer .text .info .icon{
+        background-color: #ccc;
+        padding: 20px;
+        border-radius: 10%;
+        margin-bottom: 10px;
+        transition: 0.4s;
+    }
+    
+}
+/* end about */
+/* start services */
+.services{
+    margin-top: 10px;
+}
+.services .continer{
+    text-align: center;
+    line-height: 2;
+}
+.services .continer hr{
+    width: 10%;
+    margin:  10px auto;
+    border:  solid 2px black;
+    border-radius: 10px;
+}
+.services .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+    text-align: center;
+    margin: 10px;
+}
+.services .content .box i{
+    font-size: 30px;
+    background-color: red;
+    padding: 30px;
+    border-radius: 50%;
+    transform: skew(-20deg);
+}
+.services .content .box{
+    padding: 30px;
+    background-color: #ddd;
+    line-height: 2;
+    position: relative;
+}
+/* end services */
+/* start form */
+.form{
+    background-color: rgb(0, 221, 255);
+}
+.form .continer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form .continer .text{
+    line-height: 2;
+}
+.form  .continer .text hr{
+    width: 15%;
+    background-color: black;
+    border:  solid 3px black;
+    border-radius: 20px;
+}
+.form .continer .text p{
+    color: black;
+    margin-bottom: 20px;
+}
+.form .continer .text button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+    margin-left: 10px;
+}
+.form .continer .text button:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.form .continer  .informtion{
+    background-color: white;
+    padding: 50px;
+    margin: 10px;
+}
+.form .continer .informtion input{
+    margin: 10px;
+    width: 100%;
+    padding: 20px;
+}
+.form .continer .informtion button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius:5px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+    margin-left: 10px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+@media (max-width:767px) {
+    .form .continer{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .form .continer .informtion{
+        margin: 10px auto;
+    }
+    
+}
+/* end form */
+/* start mediacal */
+.medical{
+    margin-top: 30px;
+}
+.medical .continer{
+    text-align: center;
+    line-height: 2;
+}
+.medical .continer hr{
+    width: 10%;
+    margin:  10px auto;
+    border:  solid 3px black;
+    border-radius: 10px;
+}
+/* end medical */
+/* start doctor */
+.doctor{
+    margin-top: 30px;
+}
+.doctor .continer{
+    text-align: center;
+    line-height: 2;
+}
+.doctor .continer hr{
+    width: 10%;
+    margin:  10px auto;
+    border:  solid 3px black;
+    border-radius: 10px;
+}
+.doctor .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+    margin: 10px;
+}
+.doctor .content .card  .card-body a{
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.doctor .content .card .card-body a:hover{
+    color: red;
+}
+/* end doctor */
+/* start test */
+.test{
+    margin-top: 30px;
+    overflow: hidden;
+}
+.test .continer{
+    text-align: center;
+    line-height: 2;
+}
+.test .continer hr{
+    width: 10%;
+    margin:  10px auto;
+    border:  solid 3px black;
+    border-radius: 10px;
+}
+.test .content .carousel-indicators button{
+    border-radius: 50%;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+.test .content .carousel-indicators:hover button{
+    transform: scale(10px);
+}
+.test .content .carousel-inner img{
+    text-align: center;
+    position: relative;
+}
+
+
+/* end test */
+/* start plog */
+.plog{
+    margin-top: 60px;
+    overflow: hidden;
+}
+.plog .continer{
+    text-align: center;
+    line-height: 2;
+}
+.plog .continer h4{
+    color: red;
+}
+.plog .continer hr{
+    width: 10%;
+    margin:  10px auto;
+    border:  solid 3px black;
+    border-radius: 10px;
+}
+.plog .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 20px;
+    margin: 10px;
+}
+.plog .content .box img{
+    width: 100%;
+}
+.plog .content .box{
+    background-color: #ccc;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow:  0 0 20px white;
+}
+.plog .content .box .text {
+    padding: 20px;
+}
+.plog .content .box .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px
+}
+.plog .content .box .info .icon{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .plog .content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 20px;
+        margin: 10px;
+    }
+    .plog .content .box img{
+        width: 100%;
+    }
+    .plog .content .box .info{
+        margin:  10px auto;
+    }
+    .plog .content .box .info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+/* end plog */
+/* start footer */
+.footer{
+    margin-top: 20px;
+    background-color: black;
+}
+.footer .continer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    margin: 5px;
+    color: white;
+    padding: 30px;
+    line-height: 2;
+}
+.footer .continer .box img{
+    width: 40%;
+    margin: 5px;
+}
+.footer .continer .box ul{
+    list-style-type: none;
+}
+.footer .continer .box ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.footer .continer .box ul li a:hover{
+    color: blue;
+}
+.footer .continer .box i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.footer .end{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* end footer */
